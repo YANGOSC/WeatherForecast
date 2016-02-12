@@ -9,14 +9,14 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class CoolWeatherOpenHelper extends SQLiteOpenHelper{
     //建表语句定义为常量
-    public static final String CREATE_PROVINCE = "create table Province{"
+    public static final String CREATE_PROVINCE = "create table Province("
             +"id integer primary key autoincrement,"
             +"province_name text,"
             +"province_code text)";
 
     public static final String CREATE_CITY = "create table City("
             +"id integer primary key autoincrement,"
-            +"city_nama text,"
+            +"city_name text,"
             +"city_code text,"
             +"province_id integer)";
 
@@ -30,7 +30,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper{
         db.execSQL(CREATE_PROVINCE);
         db.execSQL(CREATE_CITY);
 
-        db.execSQL(CREATE_CITY);
+        db.execSQL(CREATE_COUNTY);
 
     }
 
